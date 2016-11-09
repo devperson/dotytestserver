@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Web;
 using System.Web.Http;
-using DotyAppServer.Controllers;
 using DotyAppServer.DataAccess;
 using DotyAppServer.Models;
 using DotyAppServer.Models.Request;
 using DotyAppServer.Models.Response;
-using DotyAppServer.Utility;
 
 namespace DotyAppServer.Controllers
 {
@@ -75,27 +71,7 @@ namespace DotyAppServer.Controllers
                     db.SaveChanges();
                 }
 
-                //send Push Notification
-                InvokeAfterSec(1500, () =>
-                 {
-                     using (DataBaseContext db = new DataBaseContext())
-                     {
-                         var sender = db.Users.FirstOrDefault(s => s.Id == request.SenderId);
-                         var users = db.Users.Where(u => !string.IsNullOrEmpty(u.Platform) && !string.IsNullOrEmpty(u.DeviceToken) && u.Id != request.SenderId).ToList();
-                         var alert = string.Empty;
-                         if (!string.IsNullOrEmpty(sender.FirstName) && !string.IsNullOrEmpty(sender.LastName))
-                             alert = "Hi, there is a new message from " + sender.FirstName + " " + sender.LastName;
-                         else if (!string.IsNullOrEmpty(sender.FirstName))
-                             alert = "Hi, there is a new message from " + sender.FirstName;
-                         else alert = "Hi, there is a new message";
-
-                         var pushMessage = new PushMessage() { Alert = alert };
-                         PushNotification(users, pushMessage);
-                     }
-                 });
-
-                return this.ReturnSuccess();
-                //return new NewMessageResponse { MessageID = message.Id, CreatedDateStringUtc = message.Date.ToString(new CultureInfo("en-US")), Success = true };
+                return this.ReturnSuccess();                
             }
             catch (Exception ex)
             {

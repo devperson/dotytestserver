@@ -245,9 +245,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PhotosController.cs" />
     <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -257,14 +255,9 @@
     <Compile Include="Models\DataAccess\DataBaseContext.cs" />
     <Compile Include="Models\DataAccess\DataBaseInitializer.cs" />
     <Compile Include="Models\DataAccess\ModelConfigs.cs" />
-    <Compile Include="Models\Document.cs" />
-    <Compile Include="Models\Event.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Request\MessageRequest.cs" />
-    <Compile Include="Models\Request\EventRequest.cs" />
     <Compile Include="Models\Request\UserRequest.cs" />
-    <Compile Include="Models\Response\DocumentResponse.cs" />
-    <Compile Include="Models\Response\EventResponse.cs" />
     <Compile Include="Models\Response\IDResponse.cs" />
     <Compile Include="Models\Response\MessageResponse.cs" />
     <Compile Include="Models\Response\ResponseBase.cs" />
@@ -276,10 +269,6 @@
     <Compile Include="SignalR\MsgData.cs" />
     <Compile Include="SignalR\RegisterHubs.cs" />
     <Compile Include="Utils\Extenssions.cs" />
-    <Compile Include="Utils\MAilHelper.cs" />
-    <Compile Include="Utils\Multipart\MimeMultipart.cs" />
-    <Compile Include="Utils\Multipart\UploadMultipartFormProvider.cs" />
-    <Compile Include="Utils\PushHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\DotyAppServer.XML" />
@@ -361,6 +350,7 @@
     <None Include="Properties\PublishProfiles\mercedesapp - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\mercedesapp - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Images\avatar.png" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />

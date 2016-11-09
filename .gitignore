@@ -1,3 +1,6 @@
 /MvcApplication1/obj
 /MvcApplication1/bin
 /.vs
+/MvcApplication1/App_Data/aspnet-DotyAppServer-20151129210735.mdf
+/MvcApplication1/App_Data/aspnet-DotyAppServer-20151129210735_log.ldf
+/MvcApplication1/DotyAppServer.csproj.user
